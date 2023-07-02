@@ -1,12 +1,13 @@
 import { Routes, Route } from 'react-router-dom';
-import Movies from 'pages/Movies';
-import Home from 'pages/Home';
-import NotFound from 'pages/NotFound';
 import SharedLayout from './SharedLayout/SharedLayout';
-import { useEffect } from 'react';
+import { useEffect, lazy } from 'react';
 import { MovieDetails } from 'pages/MovieDetails';
 import { Cast } from './Cast/Cast';
 import { Reviews } from './Reviews/Reviews';
+
+const Home = lazy(() => import('pages/Home'));
+const Movies = lazy(() => import('pages/Movies'));
+const NotFound = lazy(() => import('pages/NotFound'));
 
 export const App = () => {
   useEffect(() => {});

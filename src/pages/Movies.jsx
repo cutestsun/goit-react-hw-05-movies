@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 import { getMovieByName } from 'services/api';
 import { Searchbar } from 'components/Searchbar/Searchbar';
@@ -38,9 +38,12 @@ export default function Movies() {
     <>
       <Searchbar onQueryChange={onQueryChange} />
       {isLoading && <Loader />}
+      {error && <p>{error} </p>}
       {movies.length > 0 && <MoviesList movies={movies} />}
 
-      <Outlet />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Outlet />
+      </Suspense>
     </>
   );
 }

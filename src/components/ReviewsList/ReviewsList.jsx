@@ -1,4 +1,3 @@
-import { Grid, GridItem } from 'components/MoviesList/MoviesList.styled';
 import { Description, List, Name } from './ReviewsList.styled';
 
 export const ReviewsList = ({ reviews }) => {

@@ -1,7 +1,7 @@
 import { Loader } from 'components/Loader/Loader';
 import { MovieInfo } from 'components/MovieInfo/MovieInfo';
 import { StyledLink } from 'components/MovieInfo/MovieInfo.styled';
-import { useEffect, useState } from 'react';
+import { Suspense, useEffect, useState } from 'react';
 import { Outlet, useParams } from 'react-router-dom';
 import { getMovieById } from 'services/api';
 
@@ -47,7 +47,9 @@ export const MovieDetails = () => {
       />
       <StyledLink to={'cast'}>Cast</StyledLink>
       <StyledLink to={'reviews'}>Reviews</StyledLink>
-      <Outlet />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Outlet />
+      </Suspense>
     </>
   );
 };
