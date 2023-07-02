@@ -6,7 +6,7 @@ export default function SharedLayout() {
     <>
       <nav>
         <StyledNavLink to="/">Home</StyledNavLink>
-        <StyledNavLink to="movies">Movies</StyledNavLink>
+        <StyledNavLink to="/movies">Movies</StyledNavLink>
       </nav>
       <Outlet />
     </>
