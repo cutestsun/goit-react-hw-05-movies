@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import SharedLayout from './SharedLayout/SharedLayout';
-import { useEffect, lazy } from 'react';
+import { lazy } from 'react';
 import { MovieDetails } from 'pages/MovieDetails';
 import { Cast } from './Cast/Cast';
 import { Reviews } from './Reviews/Reviews';
@@ -10,7 +10,6 @@ const Movies = lazy(() => import('pages/Movies'));
 const NotFound = lazy(() => import('pages/NotFound'));
 
 export const App = () => {
-  useEffect(() => {});
   return (
     <>
       <Routes>
