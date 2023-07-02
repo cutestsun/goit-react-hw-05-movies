@@ -47,7 +47,7 @@ export const MovieDetails = () => {
       />
       <StyledLink to={'cast'}>Cast</StyledLink>
       <StyledLink to={'reviews'}>Reviews</StyledLink>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Loader />}>
         <Outlet />
       </Suspense>
     </>

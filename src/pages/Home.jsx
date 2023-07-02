@@ -33,7 +33,9 @@ export default function Home() {
       <Title>Trending today</Title>
       {isLoading && <Loader />}
       {error && <p>{error} </p>}
-      <MoviesList movies={trendingMovies} />
+      {!isLoading && trendingMovies.length > 0 && (
+        <MoviesList movies={trendingMovies} />
+      )}
     </>
   );
 }
