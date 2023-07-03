@@ -11,6 +11,10 @@ export default function Movies() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
+    if (query === '') {
+      return;
+    }
+
     const fetchMovies = async () => {
       try {
         setIsLoading(true);
