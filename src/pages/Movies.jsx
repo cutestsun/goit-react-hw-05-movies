@@ -11,7 +11,7 @@ export default function Movies() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    if (query === '') {
+    if (!query) {
       return;
     }
 
