@@ -3,9 +3,9 @@ import styled from 'styled-components';
 export const Grid = styled.ul`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-
   grid-gap: 24px;
   padding: 24px;
+  max-width: 1760px;
 `;
 
 export const GridItem = styled.li`

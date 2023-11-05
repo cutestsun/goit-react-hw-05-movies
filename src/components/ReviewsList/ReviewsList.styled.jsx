@@ -5,6 +5,7 @@ export const List = styled.ul`
   flex-direction: column;
   padding: 24px;
   gap: 24px;
+  max-width: 1760px;
 `;
 
 export const Name = styled.p`

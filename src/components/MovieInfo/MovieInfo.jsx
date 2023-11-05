@@ -14,6 +14,8 @@ export const MovieInfo = ({
   popularity,
   budget,
   genres,
+  release_date,
+  vote_average,
 }) => {
   const location = useLocation();
 
@@ -33,9 +35,11 @@ export const MovieInfo = ({
         <InfoWrapper>
           <Title>{original_title}</Title>
           <Text>{overview}</Text>
+          <Text>User score: {(vote_average * 10).toFixed(0)}%</Text>
           <Text>Popularity: {popularity}</Text>
           {budget > 0 && <Text>Budget: {budget}$</Text>}
-          <Text>Genres: {genres?.map(({ name }) => `${name}, `)}</Text>
+          <Text>Genres: {genres?.map(({ name }) => name).join(', ')}</Text>
+          <Text>Release date: {release_date}</Text>
         </InfoWrapper>
       </MainWrapper>
     </>

@@ -11,8 +11,16 @@ export const MovieDetails = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  const { original_title, overview, poster_path, popularity, budget, genres } =
-    movieInfo || {};
+  const {
+    original_title,
+    overview,
+    poster_path,
+    popularity,
+    budget,
+    genres,
+    release_date,
+    vote_average,
+  } = movieInfo || {};
 
   useEffect(() => {
     const fetchMovies = async () => {
@@ -44,6 +52,8 @@ export const MovieDetails = () => {
         popularity={popularity}
         budget={budget}
         genres={genres}
+        release_date={release_date}
+        vote_average={vote_average}
       />
       <StyledLink to={'cast'}>Cast</StyledLink>
       <StyledLink to={'reviews'}>Reviews</StyledLink>

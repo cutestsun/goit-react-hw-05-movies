@@ -12,12 +12,13 @@ export const MainWrapper = styled.div`
   padding: 20px;
   gap: 40px;
 
-  justify-content: space-between;
+  /* justify-content: space-between; */
 `;
 
 export const Text = styled.p`
   font-weight: 600;
   font-size: 20px;
+  max-width: 1000px;
 `;
 
 export const Title = styled.h1``;
@@ -30,4 +31,9 @@ export const StyledLink = styled(Link)`
   display: inline-block;
   border: 2px solid teal;
   border-radius: 5px;
+`;
+
+export const Img = styled.img`
+  width: 320px;
+  object-fit: cover;
 `;

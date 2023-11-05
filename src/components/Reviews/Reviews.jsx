@@ -30,7 +30,6 @@ export const Reviews = () => {
     fetchMovies();
   }, [movieId]);
 
-  console.log(reviewsInfo);
   return (
     <>
       {isLoading && <Loader />}
