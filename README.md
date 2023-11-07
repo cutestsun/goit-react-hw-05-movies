@@ -23,12 +23,12 @@ name, view movie details, and check out various popular movies.
 The following technologies were used to create this project:
 
 - HTML
-- CSS
 - JavaScript
 - React
 - Axios
 - The Movie Database (TMDb) API
 - React Router
+- Styled Components
 
 ## Project Launch
 
